@@ -6,3 +6,8 @@ class AbbrElement : Html5Element!("abbr"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	AbbrElement abbr = new AbbrElement();
+	assert(abbr.toString == "<abbr />");
+}

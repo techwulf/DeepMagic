@@ -47,7 +47,7 @@ unittest{
 		),
 		""
 	);
-	small.toString().writeln;
+	//small.toString().writeln;
 	small.Id.writeln;
 	assert(small.Id == "test_id");
 	assert(small.toString() == "<small id=\"test_id\"></small>");

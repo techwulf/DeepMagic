@@ -6,3 +6,8 @@ class HeaderElement : Html5Element!("header"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	HeaderElement header = new HeaderElement();
+	assert(header.toString == "<header />");
+}

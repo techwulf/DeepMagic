@@ -6,3 +6,8 @@ class CodeElement : Html5Element!("code"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	CodeElement code = new CodeElement();
+	assert(code.toString == "<code />");
+}

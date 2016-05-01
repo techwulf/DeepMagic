@@ -6,3 +6,8 @@ class AddressElement : Html5Element!("address"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	AddressElement address = new AddressElement();
+	assert(address.toString == "<address />");
+}

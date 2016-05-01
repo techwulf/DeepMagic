@@ -9,3 +9,29 @@ class TdElement : Html5Element!("td"){
 	mixin(AttributeTemplate!(typeof(this), "Headers", "headers"));
 }
 
+///Check Default Initialization.
+unittest{
+	TdElement td = new TdElement();
+	assert(td.toString == "<td />");
+}
+
+///Check ColSpan Attribute.
+unittest{
+	TdElement td = new TdElement();
+	td.ColSpan = "colspan";
+	assert(td.toString == "<td colspan=\"colspan\" />");
+}
+
+///Check RowSpan Attribute.
+unittest{
+	TdElement td = new TdElement();
+	td.RowSpan = "rowspan";
+	assert(td.toString == "<td rowspan=\"rowspan\" />");
+}
+
+///Check Headers Attribute.
+unittest{
+	TdElement td = new TdElement();
+	td.Headers = "headers";
+	assert(td.toString == "<td headers=\"headers\" />");
+}

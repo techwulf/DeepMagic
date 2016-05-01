@@ -6,3 +6,8 @@ class UElement : Html5Element!("u"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	UElement u = new UElement();
+	assert(u.toString == "<u />");
+}

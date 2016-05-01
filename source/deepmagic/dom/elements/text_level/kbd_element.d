@@ -6,3 +6,8 @@ class KbdElement : Html5Element!("kbd"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	KbdElement kbd = new KbdElement();
+	assert(kbd.toString == "<kbd />");
+}

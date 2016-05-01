@@ -6,3 +6,8 @@ class ParamElement : Html5Element!("param"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	ParamElement param = new ParamElement();
+	assert(param.toString == "<param />", param.toString);
+}

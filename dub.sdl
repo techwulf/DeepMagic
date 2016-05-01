@@ -9,7 +9,7 @@ dependency "vibe-d" version="~>0.7.23"
 
 targetPath "bin"
 
-buildRequirements "allowWarnings"
+buildRequirements "silenceWarnings"
 
 buildType "plain" {
 	buildOptions

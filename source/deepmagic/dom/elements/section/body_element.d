@@ -18,3 +18,10 @@ class BodyElement : Html5Element!("body"){
 	mixin(AttributeTemplate!(typeof(this), "OnUnload", "onunload"));
 }
 
+//TODO: Fix Body Element ///Check Default Initialization.
+/*
+unittest{
+	BodyElement body = new BodyElement();
+	assert(body.toString == "<body />");
+}
+*/

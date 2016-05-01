@@ -8,3 +8,22 @@ class LabelElement : Html5Element!("label"){
 	mixin(AttributeTemplate!(typeof(this), "For", "for"));
 }
 
+///Check Default Initialization.
+unittest{
+	LabelElement label = new LabelElement();
+	assert(label.toString == "<label />");
+}
+
+///Check Form Attribute.
+unittest{
+	LabelElement label = new LabelElement();
+	label.Form = "form";
+	assert(label.toString == "<label form=\"form\" />");
+}
+
+///Check For Attribute.
+unittest{
+	LabelElement label = new LabelElement();
+	label.For = "for";
+	assert(label.toString == "<label for=\"for\" />");
+}

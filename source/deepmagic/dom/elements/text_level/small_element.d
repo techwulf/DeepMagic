@@ -6,3 +6,8 @@ class SmallElement : Html5Element!("small", true){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	SmallElement small = new SmallElement();
+	assert(small.toString == "<small></small>");
+}

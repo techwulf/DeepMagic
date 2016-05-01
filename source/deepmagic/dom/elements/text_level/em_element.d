@@ -5,3 +5,9 @@ import deepmagic.dom;
 class EmElement : Html5Element!("em"){
 	mixin(ElementConstructorTemplate!());
 }
+
+///Check Default Initialization.
+unittest{
+	EmElement em = new EmElement();
+	assert(em.toString == "<em />");
+}

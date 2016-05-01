@@ -6,3 +6,8 @@ class NoscriptElement : Html5Element!("noscript"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	NoscriptElement noscript = new NoscriptElement();
+	assert(noscript.toString == "<noscript />");
+}

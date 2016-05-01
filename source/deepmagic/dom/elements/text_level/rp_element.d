@@ -6,3 +6,8 @@ class RpElement : Html5Element!("rp"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	RpElement rp = new RpElement();
+	assert(rp.toString == "<rp />");
+}

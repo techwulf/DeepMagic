@@ -6,3 +6,8 @@ class VarElement : Html5Element!("var"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	VarElement var = new VarElement();
+	assert(var.toString == "<var />");
+}

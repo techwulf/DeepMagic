@@ -7,3 +7,15 @@ class DataElement : Html5Element!("data"){
 	mixin(AttributeTemplate!(typeof(this), "Value", "value"));
 }
 
+///Check Default Initialization.
+unittest{
+	DataElement data = new DataElement();
+	assert(data.toString == "<data />");
+}
+
+///Check Value Attribute.
+unittest{
+	DataElement data = new DataElement();
+	data.Value = "value";
+	assert(data.toString == "<data value=\"value\" />");
+}

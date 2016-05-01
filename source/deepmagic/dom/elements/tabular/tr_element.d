@@ -6,3 +6,8 @@ class TrElement : Html5Element!("tr"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	TrElement tr = new TrElement();
+	assert(tr.toString == "<tr />");
+}

@@ -6,3 +6,8 @@ class DatalistElement : Html5Element!("datalist"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	DatalistElement datalist = new DatalistElement();
+	assert(datalist.toString == "<datalist />", datalist.toString);
+}

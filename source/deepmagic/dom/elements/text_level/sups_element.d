@@ -6,3 +6,8 @@ class SupsElement : Html5Element!("sups"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	SupsElement sups = new SupsElement();
+	assert(sups.toString == "<sups />");
+}

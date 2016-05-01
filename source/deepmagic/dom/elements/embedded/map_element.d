@@ -6,3 +6,8 @@ class MapElement : Html5Element!("map"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization
+unittest{
+	MapElement map = new MapElement();
+	assert(map.toString == "<map />", map.toString);
+}

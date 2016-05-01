@@ -6,3 +6,8 @@ class TbodyElement : Html5Element!("tbody"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	TbodyElement tbody = new TbodyElement();
+	assert(tbody.toString == "<tbody />");
+}

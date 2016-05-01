@@ -6,3 +6,8 @@ class BElement : Html5Element!("b"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	BElement b = new BElement();
+	assert(b.toString == "<b />");
+}

@@ -6,3 +6,8 @@ class BrElement : Html5Element!("br"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	BrElement br = new BrElement();
+	assert(br.toString == "<br />");
+}

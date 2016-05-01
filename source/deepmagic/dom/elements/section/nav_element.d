@@ -6,3 +6,8 @@ class NavElement : Html5Element!("nav"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	NavElement nav = new NavElement();
+	assert(nav.toString == "<nav />");
+}

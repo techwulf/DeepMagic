@@ -6,3 +6,8 @@ class TitleElement : Html5Element!("title"){
 	mixin(ElementConstructorTemplate!());
 }
 
+///Check Default Initialization.
+unittest{
+	TitleElement title = new TitleElement();
+	assert(title.toString == "<title />");
+}

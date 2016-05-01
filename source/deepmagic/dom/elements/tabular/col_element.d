@@ -7,3 +7,16 @@ class ColElement : Html5Element!("col"){
 	mixin(AttributeTemplate!(typeof(this), "Span", "span"));
 }
 
+///Check Default Initialization.
+unittest{
+	ColElement col = new ColElement();
+	assert(col.toString == "<col />");
+}
+
+///Check Span Attribute.
+unittest{
+	ColElement col = new ColElement();
+	col.Span = "span";
+	assert(col.toString == "<col span=\"span\" />");
+}
+
